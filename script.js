@@ -32,10 +32,16 @@ function checkSelectedImages(){
 
 	if(class1===class2){
 		document.getElementsByTagName("p")[0].textContent = "You are a human. Congratulations!"
-		verify.remove()
+		if (verify) {
+		  verify.remove()
+		}
+
 	} else {
 		document.getElementsByTagName("p")[0].textContent = "We can't verify you as a human. You selected the non-identical tiles."
-		verify.remove()
+		if (verify) {
+		  verify.remove()
+		}
+
 	}
 })
 	} else{
@@ -50,11 +56,11 @@ resetBtn.addEventListener("click", function(){
 		img.classList.remove("selected")
 	})
 	
-	const pElement = document.getElementsByTagName("p")[0]; 
-	pElement.textContent = ""; 
+	const pElement = document.getElementsByTagName("p")[0];
+	pElement.textContent = "";
 
-	const verifyButton = document.getElementById("verify");
+	const verifyButton = document.getElementById("verify")
   if (verifyButton) {
-    verifyButton.remove();
+    verifyButton.remove()
   }
 })
