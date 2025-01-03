@@ -23,7 +23,7 @@ function checkSelectedImages(){
 		const verify = document.createElement("button")
 		verify.id = "verify"
 		verify.textContent = "Verify"
-		document.getElementById("btns").appendChild(verify)
+		document.body.appendChild(verify)
 
 		verify.addEventListener("click", function(){
 	const selectedImgs =  document.querySelectorAll(".selected")
