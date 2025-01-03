@@ -38,12 +38,12 @@ function checkSelectedImages(){
 
 	} else {
 		document.getElementsByTagName("p")[0].textContent = "We can't verify you as a human. You selected the non-identical tiles."
-		
+		if (verify) {
+		  verify.remove()
+		}
 
 	}
 })
-	} else{
-		document.getElementById("verify").remove()
 	}
 }
 
